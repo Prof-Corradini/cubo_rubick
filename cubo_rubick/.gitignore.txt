@@ -152,6 +152,7 @@ StyleCopReport.xml
 *.tlog
 *.vspscc
 *.vssscc
+*.vsidx
 .builds
 *.pidb
 *.svclog
