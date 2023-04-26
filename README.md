@@ -1,1 +1,1 @@
-# cubo_rubick
+# Cubo di Rubick
