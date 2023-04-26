@@ -1,9 +1,12 @@
 #include <iostream>
 
 
-
 int main()
 {
-   //prova
+	int variabile = 0;
+
+	variabile++;
+
+
 }
 
