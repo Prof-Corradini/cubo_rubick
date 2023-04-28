@@ -128,6 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cubo_rubick.cpp" />
+    <ClCompile Include="librerie\cube.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="librerie\algorithms.h" />
+    <ClInclude Include="librerie\cube.h" />
+    <ClInclude Include="librerie\documentation.h" />
+    <ClInclude Include="librerie\graphics.h" />
+    <ClInclude Include="librerie\operations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

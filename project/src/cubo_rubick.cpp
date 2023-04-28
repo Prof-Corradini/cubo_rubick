@@ -1,11 +1,9 @@
 #include <iostream>
-
+#include "librerie\cube.h"
 
 int main()
 {
-	int variabile = 0;
-
-	variabile++;
+	Cube cubo;
 
 
 }
