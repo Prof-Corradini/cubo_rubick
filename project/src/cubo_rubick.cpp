@@ -3,6 +3,9 @@
 
 int main()
 {
+
+	//Ciao a tutti, benvenuti nel magico mondo bello!!!
+
 	Cube cubo;
 
 
