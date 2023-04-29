@@ -1,12 +1,14 @@
 #include "cube.h"
 
+
+
 #pragma region Facce
 
-Face::Face(){
+Face::Face() : id(generateID()) {
 
 };
 
-Face::Face(int value){
+Face::Face(int value) : id(generateID()) {
 	initializeFace(value);
 }
 
@@ -17,6 +19,8 @@ void Face::initializeFace(int value) {
 		}
 	}
 }
+
+
 
 Face::~Face() {
 
@@ -30,7 +34,7 @@ Face::~Face() {
 
 
 #pragma region Cubo
-Cube::Cube(){
+Cube::Cube() : id(generateID()){
 	this->initizializeFaces();
 }
 Cube::~Cube() {
@@ -39,7 +43,7 @@ Cube::~Cube() {
 
 void Cube::initizializeFaces() {
 	/* Inizializzo le facce del cubo */
-	for (int index_facce = 0; index_facce < 6; index_facce++) {
+	for (int index_facce = 0; index_facce < this->n_faces; index_facce++) {
 		switch (index_facce) {
 		case 0:
 			/* Faccia bianca */
