@@ -38,5 +38,8 @@
     <ClInclude Include="librerie\algorithms.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="librerie\master.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,13 +4,16 @@
 
 /* Libreria standard per utilizzare uint8_t */
 #include <cstdint>
-
+#include <iostream>
+#include <string>
+#include <random>
 
 
 class Face{
 public:
-	const int row = 3;
-	const int col = 3;
+	const int id;
+	const int n_rows = 3;
+	const int n_cols = 3;
 	int values[3][3];
 
 	Face();
@@ -24,6 +27,8 @@ public:
 
 class Cube{
 public:
+	const int id;
+	int n_faces = 6;
 	Face faces[6];
 
 	/* Costruttore */
@@ -37,6 +42,11 @@ private:
 
 };
 
+
+int generateID() {
+	srand(time(nullptr));
+	return rand() % 1500;
+}
 
 
 #endif

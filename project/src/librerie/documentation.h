@@ -3,6 +3,11 @@
 
 #include "cube.h"
 
+void mainMenu() {}
+
+void startMessage() {}
+
+
 
 
 #endif
