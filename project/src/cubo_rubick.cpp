@@ -5,7 +5,7 @@ int main()
 {
 
 	//Ciao a tutti, benvenuti nel magico mondo bello!!!
-	//Alessio Corradini A
+	//samuele silvestrini 0
 	Cube cubo;
 
 
