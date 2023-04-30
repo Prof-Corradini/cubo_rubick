@@ -8,7 +8,7 @@ Face::Face() : id(generateID()) {
 	initializeFace(-1);
 };
 
-Face::Face(int value, std::string name) : id(generateID()), name(name) {
+Face::Face(FaceType type, int value) : id(generateID()), type(type) {
 	initializeFace(value);
 }
 
@@ -47,31 +47,68 @@ Cube::~Cube() {
 
 void Cube::linkFaces() {
 
-	/* Linking fra le facce */
-	/* Bianca (centro del cubo) */
-	this->faces[0].setLinkedFaces(&this->faces[2], &this->faces[3], &this->faces[5], &this->faces[4]);
-
-	/* Gialla */
-	this->faces[1].setLinkedFaces(&this->faces[2], &this->faces[5], &this->faces[3], &this->faces[4]);
-
-
-	/* Rossa */
-	this->faces[2].setLinkedFaces(&this->faces[1], &this->faces[3], &this->faces[5], &this->faces[0]);
-
-	/* Blu */
-	this->faces[3].setLinkedFaces(&this->faces[2], &this->faces[1], &this->faces[0], &this->faces[4]);
-
-
-	/* Arancione */
-	this->faces[4].setLinkedFaces(&this->faces[0], &this->faces[3], &this->faces[5], &this->faces[1]);
-
-
-	/* Verde */
-	this->faces[5].setLinkedFaces(&this->faces[0], &this->faces[1], &this->faces[2], &this->faces[4]);
-
+	for (Face face : this->faces) {
+		switch (face.type) {
+		case Bianca:
+			face.setLinkedFaces(
+				this->getFace(Rossa),				//Up
+				this->getFace(Blu),					//Left
+				this->getFace(Verde),				//Right
+				this->getFace(Arancione)			//Down
+			);
+			break;
+		case Gialla:
+			face.setLinkedFaces(
+				this->getFace(Rossa),				//Up
+				this->getFace(Verde),				//Left
+				this->getFace(Blu),					//Right
+				this->getFace(Arancione)			//Down
+			);
+			break;
+		case Rossa:
+			face.setLinkedFaces(
+				this->getFace(Gialla),				//Up
+				this->getFace(Blu),					//Left
+				this->getFace(Verde),				//Right
+				this->getFace(Bianca)				//Down
+			);
+			break;
+		case Blu:
+			face.setLinkedFaces(
+				this->getFace(Rossa),				//Up
+				this->getFace(Gialla),				//Left
+				this->getFace(Bianca),				//Right
+				this->getFace(Arancione)			//Down
+			);
+			break;
+		case Arancione:
+			face.setLinkedFaces(
+				this->getFace(Bianca),				//Up
+				this->getFace(Blu),					//Left
+				this->getFace(Verde),				//Right
+				this->getFace(Gialla)				//Down
+			);
+			break;
+		case Verde:
+			face.setLinkedFaces(
+				this->getFace(Bianca),				//Up
+				this->getFace(Gialla),				//Left
+				this->getFace(Rossa),				//Right
+				this->getFace(Arancione)			//Down
+			);
+			break;
+		}
+	}
 }
 
-
+Face* Cube::getFace(FaceType name) {
+	for (Face face : this-> faces){
+		if (face.type == name) {
+			return &face;
+		}
+	}
+	return nullptr;
+}
 
 int generateID() {
 	return rand() % 1500;

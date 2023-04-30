@@ -9,10 +9,20 @@
 #include <random>
 
 
+enum FaceType{
+	Nessuno,
+	Bianca,
+	Gialla,
+	Rossa,
+	Blu,
+	Arancione,
+	Verde
+};
+
 class Face{
 public:
 	const int id;
-	std::string name = "";
+	FaceType type = Nessuno;
 	 
 	Face* up = nullptr;
 	Face* left = nullptr;
@@ -25,7 +35,7 @@ public:
 
 
 	Face();
-	Face(int, std::string);
+	Face(FaceType, int);
 
 	void initializeFace(int);
 	void setLinkedFaces(Face* up, Face* left, Face* right, Face* down);
@@ -40,12 +50,12 @@ public:
 	const int id;
 	int n_faces = 6;
 	Face faces[6] = { 
-		Face(15,	"Bianca"),
-		Face(11,	"Gialla"),
-		Face(9,		"Rossa"),
-		Face(12,	"Blu"),
-		Face(202,	"Arancione"),
-		Face(2,		"Verde") 
+		Face(Bianca,	15),
+		Face(Gialla,	11),
+		Face(Rossa,		9),
+		Face(Blu,		12),
+		Face(Arancione, 202),
+		Face(Verde,		2)
 	};
 
 	/* Costruttore */
@@ -53,6 +63,7 @@ public:
 	/* Distruttore */
 	~Cube();
 	void linkFaces();
+	Face* getFace(FaceType name);
 
 
 private:

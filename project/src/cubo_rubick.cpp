@@ -6,17 +6,15 @@
 int main()
 {
 	srand(time(nullptr));
+
 	Cube cubo;
 
-
-	cubo.initizializeFaces();
-
-	std::cout << &cubo.faces[0];
-	std::cout << &cubo.faces[1];
-	std::cout << &cubo.faces[2];
-	std::cout << &cubo.faces[3];
-	std::cout << &cubo.faces[4];
-	std::cout << &cubo.faces[5];
+	std::cout << cubo.getFace(Bianca);
+	std::cout << cubo.getFace(Rossa);
+	std::cout << cubo.getFace(Gialla);
+	std::cout << cubo.getFace(Verde);
+	std::cout << cubo.getFace(Blu);
+	std::cout << cubo.getFace(Arancione);
 
 }
 
