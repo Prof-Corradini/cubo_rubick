@@ -5,10 +5,10 @@
 #pragma region Facce
 
 Face::Face() : id(generateID()) {
-
+	initializeFace(-1);
 };
 
-Face::Face(int value) : id(generateID()) {
+Face::Face(int value, std::string name) : id(generateID()), name(name) {
 	initializeFace(value);
 }
 
@@ -20,7 +20,12 @@ void Face::initializeFace(int value) {
 	}
 }
 
-
+void Face::setLinkedFaces(Face* up, Face* left, Face* right, Face* down){
+	this->up = &*up;
+	this->left = &*left;
+	this->right = &*right;
+	this->down = &*down;
+}
 
 Face::~Face() {
 
@@ -35,51 +40,41 @@ Face::~Face() {
 
 #pragma region Cubo
 Cube::Cube() : id(generateID()){
-	this->initizializeFaces();
+	this->linkFaces();
 }
 Cube::~Cube() {
-	delete faces;
 }
 
-void Cube::initizializeFaces() {
-	/* Inizializzo le facce del cubo */
-	for (int index_facce = 0; index_facce < this->n_faces; index_facce++) {
-		switch (index_facce) {
-		case 0:
-			/* Faccia bianca */
-			(*this).faces[index_facce].initializeFace(15);
-			break;
+void Cube::linkFaces() {
 
-		case 1:
-			/* Faccia gialla */
-			this->faces[index_facce].initializeFace(11);
-			break;
+	/* Linking fra le facce */
+	/* Bianca (centro del cubo) */
+	this->faces[0].setLinkedFaces(&this->faces[2], &this->faces[3], &this->faces[5], &this->faces[4]);
 
-		case 2:
-			/* Faccia rossa */
-			this->faces[index_facce].initializeFace(9);
-			break;
+	/* Gialla */
+	this->faces[1].setLinkedFaces(&this->faces[2], &this->faces[5], &this->faces[3], &this->faces[4]);
 
-		case 3:
-			/* Faccia blu */
-			this->faces[index_facce].initializeFace(12);
-			break;
 
-		case 4:
-			/* Faccia arancione */
-			this->faces[index_facce].initializeFace(202);
-			break;
+	/* Rossa */
+	this->faces[2].setLinkedFaces(&this->faces[1], &this->faces[3], &this->faces[5], &this->faces[0]);
 
-		case 5:
-			/* Faccia verde */
-			this->faces[index_facce].initializeFace(2);
-			break;
-		default:
-			break;
-		}
+	/* Blu */
+	this->faces[3].setLinkedFaces(&this->faces[2], &this->faces[1], &this->faces[0], &this->faces[4]);
 
-	}
+
+	/* Arancione */
+	this->faces[4].setLinkedFaces(&this->faces[0], &this->faces[3], &this->faces[5], &this->faces[1]);
+
+
+	/* Verde */
+	this->faces[5].setLinkedFaces(&this->faces[0], &this->faces[1], &this->faces[2], &this->faces[4]);
+
 }
 
+
+
+int generateID() {
+	return rand() % 1500;
+}
 
 #pragma endregion

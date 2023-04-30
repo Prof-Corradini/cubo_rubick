@@ -3,5 +3,7 @@
 
 #include "operations.h"
 
+void cubeSolver(Cube* cube);
+
 
 #endif

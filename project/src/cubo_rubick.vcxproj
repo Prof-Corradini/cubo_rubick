@@ -130,7 +130,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cubo_rubick.cpp" />
+    <ClCompile Include="librerie\algorithms.cpp" />
     <ClCompile Include="librerie\cube.cpp" />
+    <ClCompile Include="librerie\graphics.cpp" />
+    <ClCompile Include="librerie\operations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="librerie\algorithms.h" />

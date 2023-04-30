@@ -12,15 +12,25 @@
 class Face{
 public:
 	const int id;
+	std::string name = "";
+	 
+	Face* up = nullptr;
+	Face* left = nullptr;
+	Face* right = nullptr;
+	Face* down = nullptr;
+
 	const int n_rows = 3;
 	const int n_cols = 3;
-	int values[3][3];
+	int values[3][3] = {};
+
 
 	Face();
-	Face(int);
+	Face(int, std::string);
 
 	void initializeFace(int);
+	void setLinkedFaces(Face* up, Face* left, Face* right, Face* down);
 	~Face();
+
 
 };
 
@@ -29,13 +39,20 @@ class Cube{
 public:
 	const int id;
 	int n_faces = 6;
-	Face faces[6];
+	Face faces[6] = { 
+		Face(15,	"Bianca"),
+		Face(11,	"Gialla"),
+		Face(9,		"Rossa"),
+		Face(12,	"Blu"),
+		Face(202,	"Arancione"),
+		Face(2,		"Verde") 
+	};
 
 	/* Costruttore */
 	Cube();
 	/* Distruttore */
 	~Cube();
-	void initizializeFaces();
+	void linkFaces();
 
 
 private:
@@ -43,10 +60,8 @@ private:
 };
 
 
-int generateID() {
-	srand(time(nullptr));
-	return rand() % 1500;
-}
+int generateID();
+
 
 
 #endif

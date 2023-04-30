@@ -5,13 +5,11 @@
 
 int main()
 {
-
-	//Ciao a tutti, benvenuti nel magico mondo bello!!!
-	//samuele silvestrini 0
+	srand(time(nullptr));
 	Cube cubo;
 
-	cubo.initizializeFaces();
 
+	cubo.initizializeFaces();
 
 	std::cout << &cubo.faces[0];
 	std::cout << &cubo.faces[1];
