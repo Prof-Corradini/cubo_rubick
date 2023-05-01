@@ -5,11 +5,11 @@
 #include "../cubo/cube.h"
 #include <string>
 
-
-std::string visualizeCube(const Cube&);
-std::string visualizeFace(const Face&);
-void visualizeRow(Face*, int);
-
+namespace graph {
+	std::string visualizeCube(const Cube&);
+	std::string visualizeFace(const Face&);
+	void visualizeRow(Face*, int);
+}
 
 namespace std {
 	std::ostream& operator<<(std::ostream& os, const Face& face);

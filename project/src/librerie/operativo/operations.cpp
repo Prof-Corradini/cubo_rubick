@@ -6,7 +6,9 @@ namespace opr {
 	void roundUp(Face& face, bool clockwise) {
 		/* Lo scopo di questa funzione è di far ruotare i valori 
 		della prima riga di tutte le facce in modo da simulare la rotazione */
-		/*clockwise signfica "senso orario" quindi di default il senso di rotazione è antiorario*/
+		/*clockwise signfica "senso orario"
+		il suo valore di default è false quindi
+		il senso di rotazione è antiorario*/
 		int array[3] = {};
 		
 		
@@ -44,6 +46,9 @@ namespace opr {
 		* https://tinyurl.com/rotazionematrice
 		* https://www.youmath.it/lezioni/algebra-lineare/matrici-e-vettori/1568-matrice-trasposta.html
 		*/
+		/*clockwise signfica "senso orario" 
+		il suo valore di default è false quindi 
+		il senso di rotazione è antiorario*/
 
 		int final_matrix[3][3] = {};
 		int clockwise_matrix[3][3] = {

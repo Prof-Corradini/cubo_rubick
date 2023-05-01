@@ -34,6 +34,8 @@ inline void arrayCopy(int(&array1)[n], int(&array2)[n]) {
 /* -------------------------------------------- */
 
 
+
+
 /* Copia di matrix2 in matrix1 */
 /* -------------------------------------------- */
 template <size_t n_rows, size_t n_cols>

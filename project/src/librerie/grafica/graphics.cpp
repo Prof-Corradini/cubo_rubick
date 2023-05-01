@@ -3,32 +3,36 @@
 
 
 
-std::string visualizeCube(const Cube& cube) {
 
-	/* Accesso ai valori di una determinata faccia */
+namespace graph {
+	std::string visualizeCube(const Cube& cube) {
 
-	/* Visualizzazione di una riga dell'array bidimensionale */
+		/* Accesso ai valori di una determinata faccia */
 
-	return "";
-}
+		/* Visualizzazione di una riga dell'array bidimensionale */
 
-std::string visualizeFace(const Face& face) {
-	std::string final_str = "";
-
-	final_str += face.name + '\n';
-	for (int row = 0; row < face.n_rows; row++) {
-		for (int col = 0; col < face.n_rows; col++) {
-			final_str += std::to_string(face.values[row][col]);
-			final_str += ' ';
-		}
-		final_str += '\n';
+		return "";
 	}
-	return final_str;
-}
+
+	std::string visualizeFace(const Face& face) {
+		std::string final_str = "";
+
+		final_str += face.name + '\n';
+		for (int row = 0; row < face.n_rows; row++) {
+			for (int col = 0; col < face.n_rows; col++) {
+				final_str += std::to_string(face.values[row][col]);
+				final_str += ' ';
+			}
+			final_str += '\n';
+		}
+		return final_str;
+	}
 
 
-void visualizeRow(Face* face, int row_index) {
+	void visualizeRow(Face* face, int row_index) {
 
+
+	}
 
 }
 
@@ -36,14 +40,14 @@ void visualizeRow(Face* face, int row_index) {
 
 namespace std {
 	std::ostream& operator<<(std::ostream& os, const Face& face) {
-		os << visualizeFace(face);
+		os << graph::visualizeFace(face);
 		return os;
 	}
 }
 
 namespace std {
 	std::ostream& operator<<(std::ostream& os, const Cube& cube) {
-		os << visualizeCube(cube);
+		os << graph::visualizeCube(cube);
 		return os;
 	}
 }
