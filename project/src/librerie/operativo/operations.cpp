@@ -96,7 +96,7 @@ namespace opr {
 
 
 	
-	void roundFront(Face& face, bool clockwise) {
+	void roundFront(Face& face, Operations start_operation,bool clockwise) {
 		/* Rotazione della faccia in senso orario o antiorario */
 		/*Materiale utile:
 		* https://tinyurl.com/rotazionematrice
@@ -122,7 +122,7 @@ namespace opr {
 			matrixProduct(final_matrix, clockwise_matrix);
 		}
 
-		roundUp(); //Guardare funzione roundUp
+		roundUp(face, RotateFront); //Guardare funzione roundUp
 
 		/* Copio la matrice trovata */
 		matrixCopy(face.values, final_matrix);
