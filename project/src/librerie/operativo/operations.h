@@ -1,8 +1,8 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
 
-#include "cube.h"
-#include "utils.h"
+#include "../cubo/cube.h"
+#include "../array_utils.h"
 
 namespace opr {
 	void roundUp(Face& face, bool clockwise = false);

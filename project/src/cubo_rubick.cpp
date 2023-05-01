@@ -1,10 +1,13 @@
 #include <iostream>
-#include "librerie/graphics.h"
-#include "librerie/algorithms.h"
+#include "librerie/grafica/graphics.h"
+#include "librerie/algoritmi/algorithms.h"
+#include "librerie/documentazione/documentation.h"
 
 
 int main()
 {
+	doc::title("Cubo di Rubick");
+	doc::subtitle("Programma sulla simulazione e risoluzione di un cubo di Rubick");
 	srand(time(nullptr));
 
 	Cube cubo;
@@ -22,11 +25,16 @@ int main()
 	std::cout << arancione;
 	std::cout << verde;
 
-
+	std::cout << '\n';
+	std::cout << bianca << '\n';
 	opr::roundFront(bianca, false);
-	/* Non funzionante */
+	std::cout << bianca << '\n';
+	std::cout << '\n';
+
+	std::cout << '\n';
+	std::cout << gialla << '\n';
 	opr::roundFront(gialla, true);
-	std::cout << bianca;
-	std::cout << gialla;
+	std::cout << gialla << '\n';
+	std::cout << '\n';
 }
 

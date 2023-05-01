@@ -1,14 +1,14 @@
 #include "cube.h"
+#include <random>
 
 
-
-#pragma region Facce
+#pragma region Facia
 
 Face::Face() : id(generateID()) {
 	initializeFace();
 };
 
-Face::Face(FaceType type, int value) : type(type), id(generateID()) {
+Face::Face(std::string name, FaceType type, int value) : name(name), type(type), id(generateID()) {
 	initializeFace(value);
 }
 
@@ -33,7 +33,6 @@ void Face::setLinkedFaces(Face& up, Face& left, Face& right, Face& down){
 }
 
 Face::~Face() {
-
 }
 
 Face& Face::getFace() {
@@ -51,15 +50,17 @@ Cube::Cube() : id(generateID()){
 	this->linkFaces();
 }
 Cube::~Cube() {
+	delete[] faces;
 }
+
 void Cube::initializeFaces() {
 	this->faces = new Face[6]{
-		Face{Face_1,	/*,15*/ },	/*bianca*/
-		Face{Face_2, /*11*/},			/*gialla*/
-		Face{Face_3, 9},			/*rossa*/
-		Face{Face_4, 12},			/*blu*/
-		Face{Face_5, 202},			/*arancione*/
-		Face{Face_6, 2}				/*verde*/
+		Face{"Prima faccia",	Face_1,	/*,15*/ },	/*bianca*/
+		Face{"Seconda faccia",	Face_2,	/*11*/},	/*gialla*/
+		Face{"Terza faccia",	Face_3, 9},			/*rossa*/
+		Face{"Quarta faccia",	Face_4, 12},			/*blu*/
+		Face{"Quinta faccia",	Face_5, 202},			/*arancione*/
+		Face{"Sesta faccia",	Face_6, 2}				/*verde*/
 	};
 }
 
@@ -121,9 +122,10 @@ Face& Cube::getFace(FaceType name) {
 			return this->faces[i];
 		}
 	}
-	// Handle the case when the FaceType is not found
-	throw std::runtime_error("FaceType not found");
+	// Gestisco l'errore nel caso non trovi la faccia
+	throw std::runtime_error("Faccia non trovata");
 }
+
 
 
 int generateID() {

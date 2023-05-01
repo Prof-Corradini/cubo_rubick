@@ -130,19 +130,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cubo_rubick.cpp" />
-    <ClCompile Include="librerie\algorithms.cpp" />
-    <ClCompile Include="librerie\cube.cpp" />
-    <ClCompile Include="librerie\graphics.cpp" />
-    <ClCompile Include="librerie\operations.cpp" />
+    <ClCompile Include="librerie\algoritmi\algorithms.cpp" />
+    <ClCompile Include="librerie\cubo\cube.cpp" />
+    <ClCompile Include="librerie\documentazione\documentation.cpp" />
+    <ClCompile Include="librerie\grafica\graphics.cpp" />
+    <ClCompile Include="librerie\operativo\operations.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="librerie\algorithms.h" />
-    <ClInclude Include="librerie\cube.h" />
-    <ClInclude Include="librerie\documentation.h" />
-    <ClInclude Include="librerie\graphics.h" />
-    <ClInclude Include="librerie\master.h" />
-    <ClInclude Include="librerie\operations.h" />
-    <ClInclude Include="librerie\utils.h" />
+    <ClInclude Include="librerie\algoritmi\algorithms.h" />
+    <ClInclude Include="librerie\cubo\cube.h" />
+    <ClInclude Include="librerie\documentazione\documentation.h" />
+    <ClInclude Include="librerie\grafica\graphics.h" />
+    <ClInclude Include="librerie\operativo\operations.h" />
+    <ClInclude Include="librerie\array_utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

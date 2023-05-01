@@ -1,8 +1,8 @@
 #include "operations.h"
-#include "graphics.h"
+#include "../grafica/graphics.h"
 
 namespace opr {
-	/* TODO: Parlare della classe Face della rotazione delle facce*/
+	/* TODO: Parlare della classe Face e della rotazione delle facce*/
 	void roundUp(Face& face, bool clockwise) {
 		/* Lo scopo di questa funzione è di far ruotare i valori 
 		della prima riga di tutte le facce in modo da simulare la rotazione */

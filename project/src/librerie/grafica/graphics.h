@@ -1,7 +1,9 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#include "cube.h"
+
+#include "../cubo/cube.h"
+#include <string>
 
 
 std::string visualizeCube(const Cube&);

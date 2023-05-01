@@ -1,12 +1,6 @@
 #ifndef CUBE_H
 #define CUBE_H
-
-
-/* Libreria standard per utilizzare uint8_t */
-#include <cstdint>
-#include <iostream>
 #include <string>
-#include <random>
 
 
 enum FaceType{
@@ -22,6 +16,7 @@ enum FaceType{
 class Face{
 public:
 	const int id;
+	const std::string name;
 	FaceType type = None;
 	 
 	Face* up = nullptr;
@@ -33,15 +28,17 @@ public:
 	const int n_cols = 3;
 	int values[3][3] = {};
 
-
+	/* Costruttore */
 	Face();
-	Face(FaceType, int = -1);
+	/* Distruttore */
+	~Face();
+
+	Face(std::string name, FaceType type, int = -1);
 
 	Face& getFace();
 
 	void initializeFace(int = -1);
 	void setLinkedFaces(Face& up, Face& left, Face& right, Face& down);
-	~Face();
 
 
 };

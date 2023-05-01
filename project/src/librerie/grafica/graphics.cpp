@@ -1,4 +1,7 @@
 #include "graphics.h"
+#include <iostream>
+
+
 
 std::string visualizeCube(const Cube& cube) {
 
@@ -11,6 +14,8 @@ std::string visualizeCube(const Cube& cube) {
 
 std::string visualizeFace(const Face& face) {
 	std::string final_str = "";
+
+	final_str += face.name + '\n';
 	for (int row = 0; row < face.n_rows; row++) {
 		for (int col = 0; col < face.n_rows; col++) {
 			final_str += std::to_string(face.values[row][col]);
