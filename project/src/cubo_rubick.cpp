@@ -2,6 +2,7 @@
 #include "librerie/grafica/graphics.h"
 #include "librerie/algoritmi/algorithms.h"
 #include "librerie/documentazione/documentation.h"
+#include "librerie/operativo/operations.h"
 
 
 int main()

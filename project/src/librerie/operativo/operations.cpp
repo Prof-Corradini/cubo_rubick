@@ -6,7 +6,7 @@ namespace opr {
 
 
 	/* TODO: Parlare della classe Face e della rotazione delle facce*/
-	void roundUp(Face& face, Operations start_operation, bool clockwise) {
+	void roundUp(Face& face, bool prev_front_rotation, bool clockwise) {
 		/* Lo scopo di questa funzione è di far ruotare i valori 
 		della prima riga di tutte le facce in modo da simulare la rotazione */
 
@@ -15,88 +15,42 @@ namespace opr {
 		il senso di rotazione è antiorario*/
 
 		int array[3] = {};
-		switch (start_operation) {
-			case RotateUp:
-			break;
-			case RotateLeft:
-				break;
-			case RotateRight:
-				break;
-			case RotateDown:
-				break;
-			case RotateFront:
-				break;
-		}
+		
 		
 		//Eseguo le operazioni
 
 	}
 	
-	void roundUp(Cube& cube, bool clockwise){
-	
-	}
 
-	void roundDown(Face& face, Operations start_operation, bool clockwise) {
+
+	void roundDown(Face& face, bool prev_front_rotation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
 
-		switch (start_operation) {
-		case RotateUp:
-			break;
-		case RotateLeft:
-			break;
-		case RotateRight:
-			break;
-		case RotateDown:
-			break;
-		case RotateFront:
-			break;
-		}
+		
 
 	}
 
-	void roundLeft(Face& face, Operations start_operation, bool clockwise) {
+	void roundLeft(Face& face, bool prev_front_rotation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
-		switch (start_operation) {
-		case RotateUp:
-			break;
-		case RotateLeft:
-			break;
-		case RotateRight:
-			break;
-		case RotateDown:
-			break;
-		case RotateFront:
-			break;
-		}
+		
 
 	}
 
-	void roundRight(Face& face, Operations start_operation, bool clockwise) {
+	void roundRight(Face& face, bool prev_front_rotation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
-		switch (start_operation) {
-		case RotateUp:
-			break;
-		case RotateLeft:
-			break;
-		case RotateRight:
-			break;
-		case RotateDown:
-			break;
-		case RotateFront:
-			break;
-		}
+		
 
 	}
 
 
 	
-	void roundFront(Face& face, Operations start_operation,bool clockwise) {
+	void roundFront(Face& face, bool clockwise) {
 		/* Rotazione della faccia in senso orario o antiorario */
 		/*Materiale utile:
 		* https://tinyurl.com/rotazionematrice
@@ -122,7 +76,7 @@ namespace opr {
 			matrixProduct(final_matrix, clockwise_matrix);
 		}
 
-		roundUp(face, RotateFront); //Guardare funzione roundUp
+		roundUp(face, true); //Guardare funzione roundUp
 
 		/* Copio la matrice trovata */
 		matrixCopy(face.values, final_matrix);
