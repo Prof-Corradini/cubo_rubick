@@ -1,7 +1,10 @@
 #include "algorithms.h"
 
 
-void cubeSolver(Cube* cube){
+
+namespace alg {
+	void cubeSolver(Cube* cube) {
 
 
+	}
 }

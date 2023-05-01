@@ -50,5 +50,8 @@
     <ClInclude Include="librerie\master.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="librerie\utils.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

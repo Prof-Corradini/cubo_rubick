@@ -10,19 +10,19 @@
 
 
 enum FaceType{
-	Nessuno,
-	Bianca,
-	Gialla,
-	Rossa,
-	Blu,
-	Arancione,
-	Verde
+	None,
+	Face_1,
+	Face_2,
+	Face_3,
+	Face_4,
+	Face_5,
+	Face_6
 };
 
 class Face{
 public:
 	const int id;
-	FaceType type = Nessuno;
+	FaceType type = None;
 	 
 	Face* up = nullptr;
 	Face* left = nullptr;
@@ -35,10 +35,12 @@ public:
 
 
 	Face();
-	Face(FaceType, int);
+	Face(FaceType, int = -1);
 
-	void initializeFace(int);
-	void setLinkedFaces(Face* up, Face* left, Face* right, Face* down);
+	Face& getFace();
+
+	void initializeFace(int = -1);
+	void setLinkedFaces(Face& up, Face& left, Face& right, Face& down);
 	~Face();
 
 
@@ -49,21 +51,14 @@ class Cube{
 public:
 	const int id;
 	int n_faces = 6;
-	Face faces[6] = { 
-		Face(Bianca,	15),
-		Face(Gialla,	11),
-		Face(Rossa,		9),
-		Face(Blu,		12),
-		Face(Arancione, 202),
-		Face(Verde,		2)
-	};
-
+	Face* faces;
 	/* Costruttore */
 	Cube();
 	/* Distruttore */
 	~Cube();
+	void initializeFaces();
 	void linkFaces();
-	Face* getFace(FaceType name);
+	Face& getFace(FaceType name);
 
 
 private:

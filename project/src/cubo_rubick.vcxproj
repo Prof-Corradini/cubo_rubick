@@ -142,6 +142,7 @@
     <ClInclude Include="librerie\graphics.h" />
     <ClInclude Include="librerie\master.h" />
     <ClInclude Include="librerie\operations.h" />
+    <ClInclude Include="librerie\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

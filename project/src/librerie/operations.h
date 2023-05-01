@@ -2,13 +2,14 @@
 #define OPERATIONS_H
 
 #include "cube.h"
+#include "utils.h"
 
-void roundUp(Face* face);
-void roundDown(Face* face);
-void roundLeft(Face* face);
-void roundRight(Face* face);
-bool checkFace(Face* face);
-
-
+namespace opr {
+	void roundUp(Face& face, bool clockwise = false);
+	void roundDown(Face& face, bool clockwise = false);
+	void roundLeft(Face& face, bool clockwise = false);
+	void roundRight(Face& face, bool clockwise = false);
+	void roundFront(Face& face,  bool clockwise = false);
+}
 
 #endif
