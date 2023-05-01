@@ -6,7 +6,7 @@
 
 
 namespace alg {
-	void stirCube(Cube* cube);
+	void stirCube(Cube& cube);
 
 }
 #endif

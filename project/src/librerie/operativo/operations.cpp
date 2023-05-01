@@ -2,39 +2,95 @@
 #include "../grafica/graphics.h"
 
 namespace opr {
+
+
+
 	/* TODO: Parlare della classe Face e della rotazione delle facce*/
-	void roundUp(Face& face, bool clockwise) {
+	void roundUp(Face& face, Operations start_operation, bool clockwise) {
 		/* Lo scopo di questa funzione è di far ruotare i valori 
 		della prima riga di tutte le facce in modo da simulare la rotazione */
+
 		/*clockwise signfica "senso orario"
 		il suo valore di default è false quindi
 		il senso di rotazione è antiorario*/
+
 		int array[3] = {};
+		switch (start_operation) {
+			case RotateUp:
+			break;
+			case RotateLeft:
+				break;
+			case RotateRight:
+				break;
+			case RotateDown:
+				break;
+			case RotateFront:
+				break;
+		}
 		
-		
 		//Eseguo le operazioni
 
-
+	}
+	
+	void roundUp(Cube& cube, bool clockwise){
+	
 	}
 
-	void roundDown(Face& face, bool clockwise) {
+	void roundDown(Face& face, Operations start_operation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
 
+		switch (start_operation) {
+		case RotateUp:
+			break;
+		case RotateLeft:
+			break;
+		case RotateRight:
+			break;
+		case RotateDown:
+			break;
+		case RotateFront:
+			break;
+		}
+
 	}
 
-	void roundLeft(Face& face, bool clockwise) {
+	void roundLeft(Face& face, Operations start_operation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
+		switch (start_operation) {
+		case RotateUp:
+			break;
+		case RotateLeft:
+			break;
+		case RotateRight:
+			break;
+		case RotateDown:
+			break;
+		case RotateFront:
+			break;
+		}
 
 	}
 
-	void roundRight(Face& face, bool clockwise) {
+	void roundRight(Face& face, Operations start_operation, bool clockwise) {
 		int array[3] = {};
 
 		//Eseguo le operazioni
+		switch (start_operation) {
+		case RotateUp:
+			break;
+		case RotateLeft:
+			break;
+		case RotateRight:
+			break;
+		case RotateDown:
+			break;
+		case RotateFront:
+			break;
+		}
 
 	}
 
@@ -66,7 +122,7 @@ namespace opr {
 			matrixProduct(final_matrix, clockwise_matrix);
 		}
 
-		roundUp(face); //Guardare funzione roundUp
+		roundUp(); //Guardare funzione roundUp
 
 		/* Copio la matrice trovata */
 		matrixCopy(face.values, final_matrix);

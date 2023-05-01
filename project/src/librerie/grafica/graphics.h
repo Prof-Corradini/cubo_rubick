@@ -6,6 +6,7 @@
 #include <string>
 
 namespace graph {
+
 	std::string visualizeCube(const Cube&);
 	std::string visualizeFace(const Face&);
 	void visualizeRow(Face*, int);
