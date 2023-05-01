@@ -1,9 +1,11 @@
 #include "algorithms.h"
-
+#include "../operativo/operations.h"
 
 
 namespace alg {
-	void cubeSolver(Cube* cube) {
+
+	/* Scombina il cubo */
+	void stirCube(Cube* cube) {
 
 
 	}
