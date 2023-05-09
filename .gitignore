@@ -2,3 +2,4 @@
 project/.vs
 project/src/x64
 project/x64
+project/src/cubo_rubick.vcxproj.user

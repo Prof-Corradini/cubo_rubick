@@ -4,12 +4,15 @@
 
 #include "../cubo/cube.h"
 #include <string>
+#include <iostream>
 
 namespace graph {
 
 	std::string visualizeCube(const Cube&);
 	std::string visualizeFace(const Face&);
-	void visualizeRow(Face*, int);
+	std::string visualizeRow(Face&, int);
+	std::string addFrame(std::string str);
+	std::string repeat(std::string str, int n_times);
 }
 
 namespace std {

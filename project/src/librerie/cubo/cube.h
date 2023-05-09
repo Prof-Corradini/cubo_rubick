@@ -3,21 +3,23 @@
 #include <string>
 
 
-enum FaceType{
+enum FacePosition{
 	None,
-	Face_1,
-	Face_2,
-	Face_3,
-	Face_4,
-	Face_5,
-	Face_6
+	Up,
+	Left,
+	Central,
+	Right,
+	Down,
+	Back
 };
+
+
 
 class Face{
 public:
 	const int id;
 	const std::string name;
-	FaceType type = None;
+	FacePosition position = None;
 	 
 	Face* up = nullptr;
 	Face* left = nullptr;
@@ -33,7 +35,7 @@ public:
 	/* Distruttore */
 	~Face();
 
-	Face(std::string name, FaceType type, int = -1);
+	Face(std::string name, FacePosition type, int = -1);
 
 	Face& getFace();
 
@@ -55,7 +57,7 @@ public:
 	~Cube();
 	void initializeFaces();
 	void linkFaces();
-	Face& getFace(FaceType name);
+	Face& getFace(FacePosition);
 
 
 private:

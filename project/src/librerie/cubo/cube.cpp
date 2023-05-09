@@ -2,13 +2,13 @@
 #include <random>
 
 
-#pragma region Facia
+#pragma region Faccia
 
 Face::Face() : id(generateID()) {
 	initializeFace();
 };
 
-Face::Face(std::string name, FaceType type, int value) : name(name), type(type), id(generateID()) {
+Face::Face(std::string name, FacePosition position, int value) : name(name), position(position), id(generateID()) {
 	initializeFace(value);
 }
 
@@ -55,70 +55,69 @@ Cube::~Cube() {
 
 void Cube::initializeFaces() {
 	this->faces = new Face[6]{
-		Face{"Prima faccia",	Face_1,	/*,15*/ },	/*bianca*/
-		Face{"Seconda faccia",	Face_2,	/*11*/},	/*gialla*/
-		Face{"Terza faccia",	Face_3, 9},			/*rossa*/
-		Face{"Quarta faccia",	Face_4, 12},			/*blu*/
-		Face{"Quinta faccia",	Face_5, 202},			/*arancione*/
-		Face{"Sesta faccia",	Face_6, 2}				/*verde*/
+		Face{"Faccia in alto",		Up,			202},		/*arancione*/
+		Face{"Faccia a sinistra",	Left,		2},			/*verde*/
+		Face{"Faccia centrale",		Central,	15},		/*bianca*/
+		Face{"Faccia a destra",		Right,		12},		/*blu*/
+		Face{"Faccia posteriore",	Back,		11},		/*gialla*/
+		Face{"Faccia in basso",		Down,		9}			/*rossa*/
 	};
 }
 
 void Cube::linkFaces() {
-	Face& face_1	= this->getFace(Face_1); /*bianca*/	
-	Face& face_2	= this->getFace(Face_2); /*gialla*/	
-	Face& face_3	= this->getFace(Face_3); /*rossa*/	
-	Face& face_4	= this->getFace(Face_4); /*blu*/	
-	Face& face_5	= this->getFace(Face_5); /*arancione*/	
-	Face& face_6	= this->getFace(Face_6); /*verde*/	
+	//Come guardare il cubo:
+	//Faccia centrale:	bianca
+	//Faccia in alto:	arancione
+	// di conseguenza le altre
 
-	face_1.setLinkedFaces(
-		face_2,			//Up
-		face_4,			//Left
-		face_6,			//Right
-		face_5			//Down
+	Face& orange	= this->getFace(Up);
+	Face& green		= this->getFace(Left);
+	Face& white		= this->getFace(Central);	
+	Face& blue		= this->getFace(Right);	
+	Face& red		= this->getFace(Down);	
+	Face& yellow	= this->getFace(Back);	
+
+	white.setLinkedFaces(
+		/*up:*/		orange,
+		/*left:*/	green,
+		/*right:*/	blue,
+		/*down:*/	red
 	);
-
-	face_2.setLinkedFaces(
-		face_3,			//Up
-		face_6,			//Left
-		face_4,			//Right
-		face_5			//Down
+	orange.setLinkedFaces(
+		/*up:*/		yellow,
+		/*left:*/	green,
+		/*right:*/	blue,
+		/*down:*/	white
 	);
-
-	face_3.setLinkedFaces(
-		face_2,			//Up
-		face_4,			//Left
-		face_6,			//Right
-		face_1			//Down
+	blue.setLinkedFaces(
+		/*up:*/		orange,
+		/*left:*/	white,
+		/*right:*/	yellow,
+		/*down:*/	red
+	); 
+	red.setLinkedFaces(
+		/*up:*/		white,
+		/*left:*/	green,
+		/*right:*/	blue,
+		/*down:*/	yellow
 	);
-
-	face_4.setLinkedFaces(
-		face_3,			//Up
-		face_2,			//Left
-		face_1,			//Right
-		face_5			//Down
+	green.setLinkedFaces(
+		/*up:*/		orange,
+		/*left:*/	yellow,
+		/*right:*/	white,
+		/*down:*/	red
 	);
-
-	face_5.setLinkedFaces(
-		face_1,			//Up
-		face_4,			//Left
-		face_6,			//Right
-		face_2			//Down
+	yellow.setLinkedFaces(
+		/*up:*/		orange,
+		/*left:*/	blue,
+		/*right:*/	green,
+		/*down:*/	red
 	);
-
-	face_6.setLinkedFaces(
-		face_1,			//Up
-		face_2,			//Left
-		face_3,			//Right
-		face_5			//Down
-	);
-
 }
 
-Face& Cube::getFace(FaceType name) {
+Face& Cube::getFace(FacePosition position) {
 	for (int i = 0; i < 6; i++) {
-		if (this->faces[i].type == name) {
+		if (this->faces[i].position == position) {
 			return this->faces[i];
 		}
 	}

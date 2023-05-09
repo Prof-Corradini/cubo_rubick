@@ -6,12 +6,7 @@
 
 namespace opr {
 
-
-	void roundUp(Face& face, bool prev_front_rotation, bool clockwise = false);
-	void roundDown(Face& face, bool prev_front_rotation, bool clockwise = false);
-	void roundLeft(Face& face, bool prev_front_rotation, bool clockwise = false);
-	void roundRight(Face& face, bool prev_front_rotation, bool clockwise = false);
-	void roundFront(Face& face, bool clockwise);
+	void roundFace(Face& face, bool clockwise = false);
 }
 
 #endif

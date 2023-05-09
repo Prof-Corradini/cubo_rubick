@@ -31,6 +31,8 @@ inline void arrayCopy(int(&array1)[n], int(&array2)[n]) {
 		*(array1 + count) = *(array2 + count);
 	}
 }
+
+
 /* -------------------------------------------- */
 
 

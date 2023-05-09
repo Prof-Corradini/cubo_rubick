@@ -8,10 +8,6 @@ namespace doc {
 	void title(std::string);
 	void subtitle(std::string);
 	void mainMenu();
-
-	std::string addFrame(std::string str);
-	std::string repeat(std::string str, int n_times);
-
 }
 
 
