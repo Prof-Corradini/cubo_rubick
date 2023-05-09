@@ -7,7 +7,6 @@
 
 int main()
 {
-	//
 	doc::title("Cubo di Rubik");
 	doc::subtitle("Programma sulla simulazione e risoluzione di un cubo di Rubick");
 	srand(time(nullptr));
