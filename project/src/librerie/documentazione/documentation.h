@@ -7,6 +7,8 @@
 namespace doc {
 	void title(std::string);
 	void subtitle(std::string);
+	void paragraph(std::string paragraph, int color_num);
+
 	void mainMenu();
 }
 
