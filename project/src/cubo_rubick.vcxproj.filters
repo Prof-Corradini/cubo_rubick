@@ -18,24 +18,39 @@
     <ClCompile Include="cubo_rubick.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="librerie\cube.cpp">
+    <ClCompile Include="librerie\cubo\cube.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="librerie\grafica\graphics.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="librerie\operativo\operations.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="librerie\algoritmi\algorithms.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="librerie\documentazione\documentation.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="librerie\cube.h">
+    <ClInclude Include="librerie\cubo\cube.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="librerie\graphics.h">
+    <ClInclude Include="librerie\grafica\graphics.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="librerie\documentation.h">
+    <ClInclude Include="librerie\documentazione\documentation.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="librerie\operations.h">
+    <ClInclude Include="librerie\operativo\operations.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="librerie\algorithms.h">
+    <ClInclude Include="librerie\algoritmi\algorithms.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="librerie\array_utils.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
