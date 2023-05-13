@@ -21,15 +21,15 @@ int main()
 	Face& gialla	= cubo.getFace(Down);
 	Face& rossa		= cubo.getFace(Back);
 
-	std::cout << bianca;
 
-	std::cout << arancione;
-	std::cout << verde;
-	std::cout << bianca;
-	std::cout << blu;
-	std::cout << gialla;
-	std::cout << rossa;
-
+	//std::cout << arancione;
+	//std::cout << verde;
+	//std::cout << bianca;
+	//std::cout << blu;
+	//std::cout << gialla;
+	//std::cout << rossa;
+	
+	std::cout << graph::visualizeFaceRow(bianca);
 	opr::roundFace(bianca);
 
 	alg::stirCube(cubo);

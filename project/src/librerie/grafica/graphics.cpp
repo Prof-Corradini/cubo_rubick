@@ -12,14 +12,25 @@ namespace graph {
 
 		return final_str;
 	}
-
 	std::string visualizeFace(const Face& face) {
 		std::string final_str = "";
-
 		for (int row = 0; row < face.n_rows; row++) {
 			for (int col = 0; col < face.n_cols; col++) {
-				final_str += std::to_string(face.values[row][col]);
+				final_str += "\033[48;5;" + std::to_string(face.values[row][col]) + 'm' + "  " + "\033[m";
+				final_str += ' ';		
+			}
+			final_str += "\n\n";
+		}
+		return final_str;
+	}
+
+	std::string visualizeFaceRow(const Face& face) {
+		std::string final_str = "";
+		for (int row = 0; row < face.n_rows; row++) {
+			for (int col = 0; col < face.n_cols; col++) {
+				final_str += "\033[48;5;" + std::to_string(face.values[row][col]) + 'm' + "  " + "\033[m";
 				final_str += ' ';
+				visualizeRow(, row);
 			}
 			final_str += "\n\n";
 		}
@@ -29,6 +40,9 @@ namespace graph {
 
 	std::string visualizeRow(Face& face, int row_index) {
 		std::string final_str = "";
+		final_str += std::to_string(face.values[row_index][0]);
+		final_str += std::to_string(face.values[row_index][1]);
+		final_str += std::to_string(face.values[row_index][2]);
 		return final_str;
 	}
 
