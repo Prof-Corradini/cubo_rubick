@@ -27,9 +27,34 @@ void Face::initializeFace(int value) {
 
 void Face::setLinkedFaces(Face& up, Face& left, Face& right, Face& down){
 	this->up = &up;
+	this->lim_up = new int[3];
+	if (this->up != nullptr) {
+		this->lim_up[0] = this->up->values[2][0];
+		this->lim_up[1] = this->up->values[2][1];
+		this->lim_up[2] = this->up->values[2][2];
+	}
+
 	this->left = &left;
+	this->lim_left = new int[3];
+	if (this->left != nullptr) {
+		this->lim_left[0] = this->left->values[0][2];
+		this->lim_left[1] = this->left->values[1][2];
+		this->lim_left[2] = this->left->values[2][2];
+	}
 	this->right = &right;
+	this->lim_right = new int[3];
+	if (this->right != nullptr) {
+		this->lim_right[0] = this->right->values[0][0];
+		this->lim_right[1] = this->right->values[1][0];
+		this->lim_right[2] = this->right->values[2][0];
+	}
 	this->down = &down;
+	this->lim_down = new int[3];
+	if (this->down != nullptr) {
+		this->lim_down[0] = this->down->values[0][0];
+		this->lim_down[1] = this->down->values[0][1];
+		this->lim_down[2] = this->down->values[0][2];
+	}
 }
 
 Face::~Face() {

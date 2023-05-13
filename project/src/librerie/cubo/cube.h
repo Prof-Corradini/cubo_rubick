@@ -26,6 +26,11 @@ public:
 	Face* right = nullptr;
 	Face* down = nullptr;
 
+	int* lim_up = nullptr;
+	int* lim_left = nullptr;
+	int* lim_right = nullptr;
+	int* lim_down = nullptr;
+
 	const int n_rows = 3;
 	const int n_cols = 3;
 	int values[3][3] = {};
