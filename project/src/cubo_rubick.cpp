@@ -11,7 +11,8 @@ int main()
 	doc::title("Cubo di Rubik");
 	doc::subtitle("Programma sulla simulazione e risoluzione di un cubo di Rubick");
 	srand(time(nullptr));
-	Cube cubo;
+
+	Cube cubo(202, 2, 15, 12, 11, 9);
 
 	Face& arancione = cubo.getFace(Up);
 	Face& verde		= cubo.getFace(Left);

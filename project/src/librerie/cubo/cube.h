@@ -52,10 +52,10 @@ public:
 	int n_faces = 6;
 	Face* faces;
 	/* Costruttore */
-	Cube();
+	Cube(int up_color, int left_color, int central_color, int right_color, int back_color, int down_color);
 	/* Distruttore */
 	~Cube();
-	void initializeFaces();
+	void initializeFaces(int up_color, int left_color, int central_color, int right_color, int back_color, int down_color);
 	void linkFaces();
 	Face& getFace(FacePosition);
 

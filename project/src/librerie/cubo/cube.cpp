@@ -45,22 +45,22 @@ Face& Face::getFace() {
 
 
 #pragma region Cubo
-Cube::Cube() : id(generateID()){
-	this->initializeFaces();
+Cube::Cube(int up_color, int left_color, int central_color, int right_color, int back_color, int down_color) : id(generateID()){
+	this->initializeFaces(up_color, left_color, central_color, right_color, back_color, down_color);
 	this->linkFaces();
 }
 Cube::~Cube() {
 	delete[] faces;
 }
 
-void Cube::initializeFaces() {
+void Cube::initializeFaces(int up_color, int left_color, int central_color, int right_color, int back_color, int down_color) {
 	this->faces = new Face[6]{
-		Face{"Faccia in alto",		Up,			202},		/*arancione*/
-		Face{"Faccia a sinistra",	Left,		2},			/*verde*/
-		Face{"Faccia centrale",		Central,	15},		/*bianca*/
-		Face{"Faccia a destra",		Right,		12},		/*blu*/
-		Face{"Faccia posteriore",	Back,		11},		/*gialla*/
-		Face{"Faccia in basso",		Down,		9}			/*rossa*/
+		Face{"Faccia in alto",		Up,			up_color},			/*arancione*/
+		Face{"Faccia a sinistra",	Left,		left_color},		/*verde*/
+		Face{"Faccia centrale",		Central,	central_color},		/*bianca*/
+		Face{"Faccia a destra",		Right,		right_color},		/*blu*/
+		Face{"Faccia posteriore",	Back,		back_color},		/*gialla*/
+		Face{"Faccia in basso",		Down,		down_color}			/*rossa*/
 	};
 }
 
