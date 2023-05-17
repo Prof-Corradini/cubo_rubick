@@ -23,14 +23,14 @@ namespace graph {
 		}
 		return final_str;
 	}
-
+	//
 	std::string visualizeFaceRow(const Face& face) {
 		std::string final_str = "";
 		for (int row = 0; row < face.n_rows; row++) {
 			for (int col = 0; col < face.n_cols; col++) {
 				final_str += "\033[48;5;" + std::to_string(face.values[row][col]) + 'm' + "  " + "\033[m";
 				final_str += ' ';
-				visualizeRow(, row);
+				//visualizeRow(, row);
 			}
 			final_str += "\n\n";
 		}
