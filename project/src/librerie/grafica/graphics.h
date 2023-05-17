@@ -11,8 +11,7 @@ namespace graph {
 	std::string visualizeCube(const Cube&);
 	std::string visualizeFace(const Face&);
 	std::string visualizeRow(Face&, int);
-	std::string addFrame(std::string str);
-	std::string repeat(std::string str, int n_times);
+
 }
 
 namespace std {
