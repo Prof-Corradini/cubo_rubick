@@ -3,6 +3,7 @@
 
 
 namespace graph {
+	
 	std::string visualizeCube(const Cube& cube) {
 		std::string final_str = "";
 		/*Visualizzare tutte le facce del cubo nella seguente forma */
@@ -14,16 +15,39 @@ namespace graph {
 	}
 	std::string visualizeFace(const Face& face) {
 		std::string final_str = "";
+		
 		for (int row = 0; row < face.n_rows; row++) {
 			for (int col = 0; col < face.n_cols; col++) {
 				final_str += "\033[48;5;" + std::to_string(face.values[row][col]) + 'm' + "  " + "\033[m";
 				final_str += ' ';		
+				
 			}
 			final_str += "\n\n";
+			
 		}
+		//ERRORE 20/05/2023
+		final_str += pattern();
 		return final_str;
+		
 	}
-	//
+	//Nuova funzione per stampare la visualizzazione coretta delle facce
+	int pattern(){
+		int tab[3][4] = { {0,1,0,0},{1,1,1,1},{0,1,0,0} };
+		for (int col = 0; col < 3; col++) {
+			for (int raw = 0; raw < 4; raw++) {
+				if (tab[col][raw] == 1) {
+					std::cout << tab[col][raw] << " ";
+				}
+				else if (tab[col][raw] == 0) {
+					std::cout << "  ";
+				}
+			}
+
+			std::cout << "\n";
+		}
+		return 0;
+	}
+	/*
 	std::string visualizeFaceRow(const Face& face) {
 		std::string final_str = "";
 		for (int row = 0; row < face.n_rows; row++) {
@@ -36,8 +60,10 @@ namespace graph {
 		}
 		return final_str;
 	}
+	*/
 
-
+	
+	
 	std::string visualizeRow(Face& face, int row_index) {
 		std::string final_str = "";
 		final_str += std::to_string(face.values[row_index][0]);
