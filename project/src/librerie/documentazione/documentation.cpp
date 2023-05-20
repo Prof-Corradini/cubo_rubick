@@ -18,7 +18,7 @@ namespace doc {
 	void subtitle(std::string subtitle) {
 		std::string final_str = "";
 							/*testo, sfondo*/
-		final_str += "\033[38;5;171;48;5;232m" + subtitle + "\033[m" + '\n';
+		final_str += "\033[38;5;171;48;5;233m" + subtitle + "\033[m" + '\n';
 		std::cout << final_str;
 	}
 	void paragraph(std::string paragraph, int color_num) {
