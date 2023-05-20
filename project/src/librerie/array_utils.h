@@ -25,6 +25,7 @@ inline int arrayProduct(int* array1, int* array2, int dim) {
 
 /* Copia di array2 in array1 */
 /* -------------------------------------------- */
+
 template <size_t n>
 inline void arrayCopy(int(&array1)[n], int(&array2)[n]) {
 	for (int count = 0; count < n; count++) {

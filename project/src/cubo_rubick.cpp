@@ -5,6 +5,7 @@
 #include "librerie/operativo/operations.h"
 
 
+
 int main()
 {
 	//
@@ -21,7 +22,7 @@ int main()
 	Face& gialla	= cubo.getFace(Down);
 	Face& rossa		= cubo.getFace(Back);
 
-	std::cout << bianca;
+
 
 	std::cout << arancione;
 	std::cout << verde;
@@ -31,6 +32,15 @@ int main()
 	std::cout << rossa;
 
 	opr::roundFace(bianca);
+
+	std::cout << " ------------------------------------------------ \n";
+
+	std::cout << arancione;
+	std::cout << verde;
+	std::cout << bianca;
+	std::cout << blu;
+	std::cout << gialla;
+	std::cout << rossa;
 
 	alg::stirCube(cubo);
 
