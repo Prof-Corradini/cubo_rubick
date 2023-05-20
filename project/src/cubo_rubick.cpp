@@ -25,15 +25,15 @@ int main()
 	doc::paragraph( "Il cubo di Rubik presenta 6 facce, su ogni faccia sono disposti 9 cubetti, 3x3x3, ogni faccia ha un colore diverso \n", 208);
 	doc::paragraph( "ovvero: verde, rosso, bianco sopra, giallo sotto, blu e arancione. \n", 208);
 	doc::paragraph( "La struttura interna permette ad ogni cubetto di poter muoversi indipendentemente. \n", 208);
-	doc::paragraph("Lo scopo del cubo di Rubik è quello di ricomporlo facendo in modo che ogni faccia anbbia lo stesso colore. \n", 15);
+	doc::paragraph("Lo scopo del cubo di Rubik e' quello di ricomporlo facendo in modo che ogni faccia abbia lo stesso colore. \n", 15);
 	doc::paragraph("Esistono circa 43 trilioni di rioluzioni del cubo. \n", 15);
 	doc::paragraph("IL CUBO DI RUBIK AI GIORNI NOSTRI \n",89 );
 	doc::paragraph("Dato il successo del cubo, in seguito, vennero create molte altre varianti; ad esempio il Pyraminx, con la stessa  \n", 77);
-	doc::paragraph("concezione del cubo, ma di forma piramidale, il Rubik's Revenge 4x4x4, il Professor's Cube 5x5x5  \n", 77);
-	doc::paragraph("oppure, ma non in versione ufficiale, nel 2017 un ingeniere meccanico francese, creo' la versione più grande del cubo \n", 77);
+	doc::paragraph("concezione del cubo, ma di forma piramidale, il Rubik's Revenge 4x4x4, il Professor's Cube 5x5x5, \n", 77);
+	doc::paragraph("oppure, ma non in versione ufficiale, nel 2017 un ingeniere meccanico francese, creo' la versione piu' grande del cubo \n", 77);
 	doc::paragraph("ovvero 33x33x33. \n", 203);
-	doc::paragraph("Attualmente, dopo quasi 50 anni dalla sua creazione, il cubo di Rubik è ancora uno dei giocattoli piu' venduti e uno dei rompicapi \n", 203);
-	doc::paragraph("piu' famosi. \n", 203);
+	doc::paragraph("Attualmente, dopo quasi 50 anni dalla sua creazione, il cubo di Rubik e' ancora uno dei giocattoli piu' venduti, \n", 203);
+	doc::paragraph("e uno dei rompicapi piu' famosi. \n", 203);
 	srand(time(nullptr));
 
 
