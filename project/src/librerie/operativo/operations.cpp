@@ -33,9 +33,8 @@ namespace opr {
 		///////////////////////////////////////////
 		/* spostamento array laterali */ 
 		
-		int app[3];
+		int* app[3];
 		if (clockwise == true)
-		 
 		{
 			for (int i = 0; i < 3; i++) {
 				app[i] = face.lim_right[i];
@@ -46,9 +45,7 @@ namespace opr {
 
 			}
 		}
-		else
-		{
-			
+		else{
 			for (int i = 0; i < 3; i++) {
 				app[i] = face.lim_right[i];
 				face.lim_right[i] = face.lim_down[i];
@@ -57,22 +54,22 @@ namespace opr {
 				face.lim_up[i] = app[i];
 			}
 		}
+
 		//for caricamento right left
-
-		for (int i = 0; i < 3; i++)
-		{
-
-			//PROBLEMA QUI mettere i limiti
-			face.left[i][2] = face.lim_left[i];
-			face.right.values[i][0] = face.lim_right[i];
-		}
-
-		//for caricamento up down
-		for (int i = 0; i < 3; i++)
-		{
-			face.up[2][i] = face.lim_up[i];
-			face.down[0][i] = face.lim_down[i];
-		}
+		//for (int i = 0; i < 3; i++)
+		//{
+		//
+		//	//PROBLEMA QUI mettere i limiti
+		//	face.left[i][2] = face.lim_left[i];
+		//	face.right.values[i][0] = face.lim_right[i];
+		//}
+		//
+		////for caricamento up down
+		//for (int i = 0; i < 3; i++)
+		//{
+		//	face.up[2][i] = face.lim_up[i];
+		//	face.down[0][i] = face.lim_down[i];
+		//}
 
 		/* Sposto i valori delle faccie collegate */
 		if (face.position == Up){
