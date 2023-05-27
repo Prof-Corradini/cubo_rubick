@@ -34,19 +34,10 @@ int main()
 	std::cout << gialla;
 	std::cout << rossa;
 	
-	/*
-	std::cout << graph::visualizeFaceRow(bianca);
-	std::cout << graph::visualizeFaceRow(arancione);
-	std::cout << graph::visualizeFaceRow(blu);
-	std::cout << graph::visualizeFaceRow(verde);
-	std::cout << graph::visualizeFaceRow(rossa);
-	std::cout << graph::visualizeFaceRow(gialla);
-	*/
-
 	opr::roundFace(bianca);
 	graph::pattern();
 	alg::stirCube(cubo);
 
-
+	graph::visualiz(bianca);
 }
 

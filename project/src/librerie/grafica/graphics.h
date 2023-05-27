@@ -12,9 +12,10 @@ namespace graph {
 	std::string visualizeFace(const Face&);
 	std::string visualizeRow(Face&, int);
 	int pattern();
-	std::string visualizeFaceRow(const Face& face);
 	std::string addFrame(std::string str);
 	std::string repeat(std::string str, int n_times);
+	void visualiz(Face& face);
+	
 }
 
 namespace std {
