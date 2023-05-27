@@ -30,54 +30,40 @@ namespace opr {
 		if (clockwise == true) {
 			matrixProduct(final_matrix, clockwise_matrix);
 		}
-		///////////////////////////////////////////
-		/* spostamento array laterali */ 
+
+	
+		/* Copio la matrice trovata */
 		
-		int* app[3];
+		matrixCopy(face.values, final_matrix);
+
+		
+		///////////////////////////////////////////
+		/* spostamento array laterali */
+		/* Sposto i valori delle faccie collegate */
+		if (face.position == Up) {
+
+		}
+		int app[3];
 		if (clockwise == true)
 		{
 			for (int i = 0; i < 3; i++) {
-				app[i] = face.lim_right[i];
-				face.lim_right[i] = face.lim_up[i];
-				face.lim_up[i] = face.lim_left[i];
-				face.lim_left[i] = face.lim_down[i];
-				face.lim_down[i] = app[i];
-
+				app[i] = *face.lim_right[i];
+				*face.lim_right[i] = *face.lim_up[i];
+				*face.lim_up[i] = *face.lim_left[i];
+				*face.lim_left[i] = *face.lim_down[i];
+				*face.lim_down[i] = app[i];
 			}
 		}
-		else{
-			for (int i = 0; i < 3; i++) {
-				app[i] = face.lim_right[i];
-				face.lim_right[i] = face.lim_down[i];
-				face.lim_down[i] = face.lim_left[i];
-				face.lim_left[i] = face.lim_up[i];
-				face.lim_up[i] = app[i];
-			}
-		}
-
-		//for caricamento right left
-		//for (int i = 0; i < 3; i++)
-		//{
-		//
-		//	//PROBLEMA QUI mettere i limiti
-		//	face.left[i][2] = face.lim_left[i];
-		//	face.right.values[i][0] = face.lim_right[i];
-		//}
-		//
-		////for caricamento up down
-		//for (int i = 0; i < 3; i++)
-		//{
-		//	face.up[2][i] = face.lim_up[i];
-		//	face.down[0][i] = face.lim_down[i];
-		//}
-
-		/* Sposto i valori delle faccie collegate */
-		if (face.position == Up){
 		
+		else {
+			for (int i = 0; i < 3; i++) {
+				app[i] = *face.lim_right[i];
+				*face.lim_right[i] = *face.lim_down[i];
+				*face.lim_down[i] = *face.lim_left[i];
+				*face.lim_left[i] = *face.lim_up[i];
+				*face.lim_up[i] = app[i];
+			}
 		}
-		/* Copio la matrice trovata */
-		matrixCopy(face.values, final_matrix);
-
 
 	}
 

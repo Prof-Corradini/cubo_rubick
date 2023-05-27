@@ -30,8 +30,9 @@ int main()
 	std::cout << blu;
 	std::cout << gialla;
 	std::cout << rossa;
+	
 
-	opr::roundFace(bianca);
+	opr::roundFace(bianca, true);
 
 	std::cout << " ------------------------------------------------ \n";
 
