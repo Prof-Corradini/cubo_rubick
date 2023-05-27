@@ -5,6 +5,10 @@
 #include "../cubo/cube.h"
 #include <string>
 #include <iostream>
+ /* Il compito dei grafici è quello di visualizzare le facce, per farlo sono state create delle matrici 3x3.
+    Per visualizzare le facce si inseriscono all'interno delle matrici i valori corrispondenti ai valori 
+	dei colori.
+    Le celle di ogni matrice vengono colorate in base al valore contenute nella cella della matrice.*/
 
 namespace graph {
 
