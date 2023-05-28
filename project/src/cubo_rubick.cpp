@@ -36,7 +36,6 @@ int main()
 	doc::paragraph("Attualmente, dopo quasi 50 anni dalla sua creazione, il cubo di Rubik e' ancora uno dei giocattoli piu' venduti \n", 203);
 	doc::paragraph("e uno dei rompicapi piu' famosi. \n", 203);
 	doc::paragraph("Gruppo Operativi \n", 203);
-	doc::paragraph("");
 	srand(time(nullptr));
 
 	Cube cubo(202, 2, 15, 12, 11, 9);
