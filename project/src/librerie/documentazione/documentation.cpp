@@ -11,35 +11,44 @@ namespace doc {
 	
 		//title[0] = colorText(&title[0], 1, 12)[0];
 
-		final_str += addFrame("\033[38;5;12;48;5;232m" + title + "\033[m" + '\n') + '\n';
+		final_str += addFrame(colorText(title, 12 ,232)) + '\n';
 
 		std::cout << final_str;
 	}
 	void subtitle(std::string subtitle) {
 		std::string final_str = "";
-							/*testo, sfondo*/
-		final_str += "\033[38;5;171;48;5;232m" + subtitle + "\033[m" + '\n';
+			
+		final_str += colorText(subtitle, 171, 232) + '\n';
 		std::cout << final_str;
 	}
 	void paragraph(std::string paragraph, int color_num) {
 		std::string final_str = "";
-		std::string color = std::to_string(color_num);
-		
-		//				Sostituire con colorText(paragraph, color_num)
-		final_str += "\033[38;5;" + color + ";48;5;232m" + paragraph + "\033[m" + '\n';
+
+		final_str += colorText(paragraph, color_num, 232) + '\n';
 		std::cout << final_str; 
 	}
 	
 
-
-	std::string colorText(std::string text, int color_num, int back_num) {
+	/* Funzione che permettere di colorare le stringhe passati*/
+	/*
+		text: testo da colorare
+		text_color: colore da applicare al testo (di default 15 = bianco )
+		back_color: colore da applicare allo sfondo del testo (di default 0 = nero )
+	*/
+	std::string colorText(std::string text, int text_color = 15, int back_color = 0) {
 		std::string final_str = "";
-		
-		final_str += "\033[38;5;" + std::to_string(color_num) + ";48;5;" + std::to_string(back_num) + "m" + text + "\033[m" + '\n';
-
+		/* Inizio */
+		final_str.append("\033[");
+		/* Colore testo */
+		final_str.append("38;5;" + std::to_string(text_color) + ";");
+		/* Colore background */
+		final_str.append("48;5;" + std::to_string(back_color) + "m");
+		/* Aggiunta del testo */
+		final_str.append(text);
+		/* Conclusione*/
+		final_str.append("\033[m");
 		return final_str;
 	}
-
 
 	/* Aggiunge una cornice alla stringa passata*/
 	std::string addFrame(std::string str) {
