@@ -7,9 +7,9 @@
 namespace opr {
 
 	/* Il gruppo degli operativi che si occupa di creare i movimenti del cubo ha lavorato in questo modo: 
-	   inizialmente hanno creato una classe in cui hanno dichiarato le varie facce e i vari limiti. 
+	   hanno creato una classe in cui hanno dichiarato le varie facce e i vari limiti. 
 	   Dopodichè hanno creato una funzione per caricare i colori, dalle facce laterali a quella principale,
-	   tramite appunto, vettori e matrici.
+	   tramite vettori e matrici.
 	   Hanno poi utilizzato una funzione per ruotare la matrice che si sta guardando tramite un teorema
 	   matematico che si basa sulla moltiplicazione delle matrici.
 	   Per permettere alla matrice di girare in senso orario e antiorario sono state create 2 casistiche

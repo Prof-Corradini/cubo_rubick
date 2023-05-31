@@ -11,7 +11,7 @@ namespace doc {
 	
 		//title[0] = colorText(&title[0], 1, 12)[0];
 
-		final_str += addFrame(colorText(title, 12 ,232)) + '\n';
+		final_str += addFrame(colorText(title, 77, 232)) + '\n';
 
 		std::cout << final_str;
 	}

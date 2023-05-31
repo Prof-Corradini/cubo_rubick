@@ -9,6 +9,16 @@ int main()
 {
 	//
 	doc::title("C");
+	doc::title("U");
+	doc::title("B");
+	doc::title("O");
+	doc::title("d");
+	doc::title("i");
+	doc::title("R");
+	doc::title("U");
+	doc::title("B");
+	doc::title("I");
+	doc::title("K");
 	doc::subtitle("Progetto della 4E, sulla realizzazione di un programma finalizzato alla risoluzione di un cubo di Rubik. \n");
 	doc::paragraph("STORIA \n", 89);
 	doc::paragraph("Nel 1974 Erno Rubik, insegnante del dipartimento di ''Interior Design'' della ''Moholy-Nagy university \n", 227);
@@ -34,8 +44,6 @@ int main()
 	doc::paragraph("ovvero 33x33x33. \n", 203);
 	doc::paragraph("Attualmente, dopo quasi 50 anni dalla sua creazione, il cubo di Rubik e' ancora uno dei giocattoli piu' venduti \n", 203);
 	doc::paragraph("e uno dei rompicapi piu' famosi. \n", 203);
-	doc::paragraph("Gruppo Operativi \n", 203);
-	doc::paragraph("");
 	srand(time(nullptr));
 
 	Cube cubo(202, 2, 15, 12, 11, 9);

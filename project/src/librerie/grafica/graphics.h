@@ -8,7 +8,12 @@
  /* Il compito dei grafici è quello di visualizzare le facce, per farlo sono state create delle matrici 3x3.
     Per visualizzare le facce si inseriscono all'interno delle matrici i valori corrispondenti ai valori 
 	dei colori.
-    Le celle di ogni matrice vengono colorate in base al valore contenute nella cella della matrice.*/
+    Le celle di ogni matrice vengono colorate in base al valore contenute nella cella della matrice.
+	Successivamente è stata creata una funzione che prende in input le facce da stampare, e una variabile
+	booleana che controlla le matrici da visualizzare, stamperà riga per riga le quattro matrici, o solo la seconda se la variabile
+	booleana è impostata su false, riempiendo lo spazio delle altre matrici con degli spazi, questa funzione viene richiamata tre volte
+	per ogni lato.
+	La funzione VisualizeSide è la funzione principale che regola come stampare, mentre VisualizeRow è la funzione di stampa.*/
 
 namespace graph {
 
