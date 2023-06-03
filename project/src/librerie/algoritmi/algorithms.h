@@ -14,6 +14,8 @@
 
 namespace alg {
 	void stirCube(Cube& cube);
-
+	void whiteCross(Cube& cube);
+	int bestCase(Face& face);
+	int checkCube(Cube& cube);
 }
 #endif
