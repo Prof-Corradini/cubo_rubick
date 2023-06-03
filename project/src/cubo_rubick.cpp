@@ -30,8 +30,6 @@ int main()
 	opr::roundFace(bianca);
 	alg::stirCube(cubo);
 
-	graph::visualizeSide(arancione, arancione, arancione, arancione, false);
-	graph::visualizeSide(verde, bianca, blu, rossa, true);
-	graph::visualizeSide(gialla, gialla, gialla, gialla, false);
+	graph::visualizeCube(cubo);
 }
 

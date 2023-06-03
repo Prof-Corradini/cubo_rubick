@@ -8,7 +8,7 @@
 
 namespace graph {
 
-	std::string visualizeCube(const Cube&);
+	void visualizeCube(Cube&);
 	std::string visualizeFace(const Face&);
 	std::string visualizeRow(Face&, int, bool);
 	int pattern();

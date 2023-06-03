@@ -4,9 +4,10 @@
 
 namespace graph {
 	
-	std::string visualizeCube(const Cube& cube) {
-		std::string final_str = "";
-		return final_str;
+	void visualizeCube(Cube& cubo) {
+		graph::visualizeSide(cubo.getFace(Up), cubo.getFace(Up) , cubo.getFace(Up), cubo.getFace(Up) , false);
+		graph::visualizeSide(cubo.getFace(Left), cubo.getFace(Central), cubo.getFace(Right), cubo.getFace(Back), true);
+		graph::visualizeSide(cubo.getFace(Down), cubo.getFace(Down), cubo.getFace(Down), cubo.getFace(Down), false);
 	}
 	std::string visualizeFace(const Face& face) {
 		std::string final_str = "";
@@ -121,9 +122,9 @@ namespace std {
 	}
 }
 
-namespace std {
-	std::ostream& operator<<(std::ostream& os, const Cube& cube) {
-		os << graph::visualizeCube(cube);
-		return os;
-	}
-}
+//namespace std {
+//	std::ostream& operator<<(std::ostream& os, Cube& cube) {
+//		os << graph::visualizeCube(cube);
+//		return os;
+//	}
+//}
