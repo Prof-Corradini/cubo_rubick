@@ -15,6 +15,7 @@ int main()
 
 	doc::title("Cubo di Rubik");
 	doc::subtitle("Programma sulla simulazione e risoluzione di un cubo di Rubick");
+	std::cout << "\n";
 	srand(time(nullptr));
 
 	Cube cubo(202, 2, 15, 12, 11, 9);
@@ -26,18 +27,8 @@ int main()
 	Face& gialla	= cubo.getFace(Down);
 	Face& rossa		= cubo.getFace(Back);
 
-
-	std::cout << arancione;
-	std::cout << verde;
-	std::cout << bianca;
-	std::cout << blu;
-	std::cout << gialla;
-	std::cout << rossa;
-	
 	opr::roundFace(bianca);
 	alg::stirCube(cubo);
-
-	
 
 	graph::visualizeSide(arancione, arancione, arancione, arancione, false);
 	graph::visualizeSide(verde, bianca, blu, rossa, true);
