@@ -12,7 +12,7 @@
 	Successivamente è stata creata una funzione che prende in input le facce da stampare, e una variabile
 	booleana che controlla le matrici da visualizzare, stamperà riga per riga le quattro matrici, o solo la seconda se la variabile
 	booleana è impostata su false, riempiendo lo spazio delle altre matrici con degli spazi, questa funzione viene richiamata tre volte
-	per ogni lato.
+	una per ogni lato.
 	La funzione VisualizeSide è la funzione principale che regola come stampare, mentre VisualizeRow è la funzione di stampa.*/
 
 namespace graph {

@@ -13,6 +13,7 @@ namespace doc {
 	std::string addFrame(std::string str);
 	std::string repeat(std::string str, int n_times);
 	std::string colorText(std::string, int, int);
+	std::string colorText(char , int , int );
 	void mainMenu();
 }
 

@@ -11,7 +11,11 @@ namespace doc {
 	
 		//title[0] = colorText(&title[0], 1, 12)[0];
 
-		final_str += addFrame(colorText(title, 77, 232)) + '\n';
+		//final_str += (colorText(title, 77, 232));
+		int size = title.size();
+		for (int i = 0; i < size; i++) {
+			final_str += (colorText(title[i], 196 + (i * 3), 232));
+		}
 
 		std::cout << final_str;
 	}
@@ -45,6 +49,21 @@ namespace doc {
 		final_str.append("48;5;" + std::to_string(back_color) + "m");
 		/* Aggiunta del testo */
 		final_str.append(text);
+		/* Conclusione*/
+		final_str.append("\033[m");
+		return final_str;
+	}
+
+	std::string colorText(char text, int text_color = 15, int back_color = 0) {
+		std::string final_str = "";
+		/* Inizio */
+		final_str.append("\033[");
+		/* Colore testo */
+		final_str.append("38;5;" + std::to_string(text_color) + ";");
+		/* Colore background */
+		final_str.append("48;5;" + std::to_string(back_color) + "m");
+		/* Aggiunta del testo */
+		final_str += text;
 		/* Conclusione*/
 		final_str.append("\033[m");
 		return final_str;

@@ -3,3 +3,7 @@ project/.vs
 project/src/x64
 project/x64
 project/src/cubo_rubick.vcxproj.user
+project/src/librerie/documentazione/.vs/VSWorkspaceState.json
+project/src/librerie/documentazione/.vs/documentazione/FileContentIndex/0ec52fb9-c415-4139-a0de-58afaed1d6c8.vsidx
+project/src/librerie/documentazione/.vs/documentazione/FileContentIndex/read.lock
+*.wsuo
